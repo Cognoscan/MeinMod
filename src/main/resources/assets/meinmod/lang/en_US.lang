@@ -1,2 +1,5 @@
-tile.dumbBlock.name=Dumb Block
-tile.dumbThing.name=Dumb Thing
+tile.MeinMod_dumbBlock.name=Dumb Block
+item.MeinMod_dumbThing.name=Dumb Thing
+item.MeinMod_key.white.name=White Key
+item.MeinMod_key.red.name=Red Key
+item.MeinMod_key.orange.name=Orange Key
