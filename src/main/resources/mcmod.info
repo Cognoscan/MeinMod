@@ -1,0 +1,16 @@
+[
+{
+  "modid": "MeinMod",
+  "name": "Mein Mod ist ausgezeichnet",
+  "description": "Example placeholder mod.",
+  "version": "0.01",
+  "mcversion": "${mcversion}",
+  "url": "teambadass.playat.ch",
+  "updateUrl": "",
+  "authorList": ["Cognoscan"],
+  "credits": "Myself, for being so cool",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
