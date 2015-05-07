@@ -37,6 +37,7 @@ public class MeinMod {
 	public static final String MODVER = "0.01";
 	
 	public static Block dumbBlock;
+	public static Block tealOre;
 	
 	public static Item dumbThing;
 	public static Item key;
@@ -68,6 +69,7 @@ public class MeinMod {
 	{
 		// blocks
 		dumbBlock = new DumbBlock();
+		tealOre = new TealOre();
 		
 		// items
 		dumbThing = new DumbThing();
@@ -163,6 +165,7 @@ public class MeinMod {
     			"A A",
     			"A A",
     			'A', tealIngot);
+    	GameRegistry.addSmelting(tealDust, new ItemStack(tealIngot), 1.0f);
 		
     	DungeonHooks.removeDungeonMob("Spider");
     	DungeonHooks.addDungeonMob("Enderman", 50);
@@ -177,6 +180,8 @@ public class MeinMod {
 			// Block Rendering
 			mesher.register(Item.getItemFromBlock(dumbBlock), 0,
 					new ModelResourceLocation(MeinMod.MODID + ":" + ((DumbBlock) dumbBlock).getName(), "inventory"));
+			mesher.register(Item.getItemFromBlock(tealOre), 0,
+					new ModelResourceLocation(MeinMod.MODID + ":" + ((TealOre) tealOre).getName(), "inventory"));
 			
 			// Item Rendering
 			mesher.register(tealPickaxe,    0, new ModelResourceLocation(MeinMod.MODID+":" + ((TealPickaxe) tealPickaxe).getName(), "inventory"));

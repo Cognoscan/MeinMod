@@ -27,6 +27,13 @@ public class TealArmor extends ItemArmor
 	@Override
 	public void onArmorTick (World world, EntityPlayer player, ItemStack stack)
 	{
+		if (stack.getItem() == MeinMod.tealHelmet)
+		{
+			if (player.isInWater())
+			{
+				player.setAir(200);
+			}
+		}
 		
 	}
 	
