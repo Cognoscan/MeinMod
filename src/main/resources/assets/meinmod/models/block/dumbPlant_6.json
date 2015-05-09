@@ -1,0 +1,6 @@
+{
+    "parent": "block/crop",
+    "textures": {
+        "crop": "meinmod:blocks/dumbPlant_6"
+    }
+}

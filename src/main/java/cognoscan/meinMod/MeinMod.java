@@ -38,8 +38,10 @@ public class MeinMod {
 	
 	public static Block dumbBlock;
 	public static Block tealOre;
+	public static Block dumbPlant;
 	
 	public static Item dumbThing;
+	public static Item dumbSeed;
 	public static Item key;
 	public static Item berry;
 	public static Item tealDust;
@@ -56,7 +58,7 @@ public class MeinMod {
 	public static Item tealChestplate;
 	public static Item tealLeggings;
 	public static Item tealBoots;
-
+	
 	ToolMaterial tealium = EnumHelper.addToolMaterial("tealium", 2, 3000, 12.0F, 3.5F, 5);
 	
 	ArmorMaterial tealArmor = EnumHelper.addArmorMaterial("tealArmor", MeinMod.MODID+":"+"tealArmor", 20, new int[] {3, 7, 6, 3}, 5);
@@ -70,9 +72,16 @@ public class MeinMod {
 		// blocks
 		dumbBlock = new DumbBlock();
 		tealOre = new TealOre();
-		
+		dumbPlant = new DumbPlant();
+		GameRegistry.registerBlock(tealOre, ItemTealOre.class, "tealOre");
+		Item itemTealOre = GameRegistry.findItem(MeinMod.MODID, "tealOre");
+		ModelBakery.addVariantName(itemTealOre,
+				MeinMod.MODID+":"+"tealOre",
+				MeinMod.MODID+":"+"tealStone");
+
 		// items
 		dumbThing = new DumbThing();
+		dumbSeed = new DumbSeed(dumbPlant);
 		key = new ItemKey();
 		berry = new ItemBerry(3, 0.3f, true);
 		tealDust = new TealDust();
@@ -180,10 +189,13 @@ public class MeinMod {
 			// Block Rendering
 			mesher.register(Item.getItemFromBlock(dumbBlock), 0,
 					new ModelResourceLocation(MeinMod.MODID + ":" + ((DumbBlock) dumbBlock).getName(), "inventory"));
-			mesher.register(Item.getItemFromBlock(tealOre), 0,
-					new ModelResourceLocation(MeinMod.MODID + ":" + ((TealOre) tealOre).getName(), "inventory"));
+			
+			Item itemTealOre = GameRegistry.findItem(MeinMod.MODID, "tealOre");
+			mesher.register(itemTealOre, 0, new ModelResourceLocation(MeinMod.MODID+":" + "tealOre", "inventory"));
+			mesher.register(itemTealOre, 1, new ModelResourceLocation(MeinMod.MODID+":" + "tealStone", "inventory"));
 			
 			// Item Rendering
+			mesher.register(dumbSeed,       0, new ModelResourceLocation(MeinMod.MODID+":" + ((DumbSeed) dumbSeed).getName(), "inventory"));
 			mesher.register(tealPickaxe,    0, new ModelResourceLocation(MeinMod.MODID+":" + ((TealPickaxe) tealPickaxe).getName(), "inventory"));
 			mesher.register(tealAxe,        0, new ModelResourceLocation(MeinMod.MODID+":" + ((TealAxe) tealAxe).getName(), "inventory"));
 			mesher.register(tealHoe,        0, new ModelResourceLocation(MeinMod.MODID+":" + ((TealHoe) tealHoe).getName(), "inventory"));

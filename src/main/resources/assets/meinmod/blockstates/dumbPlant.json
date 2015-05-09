@@ -1,0 +1,12 @@
+{
+    "variants": {
+        "age=0": { "model": "meinmod:dumbPlant_0" },
+        "age=1": { "model": "meinmod:dumbPlant_1" },
+        "age=2": { "model": "meinmod:dumbPlant_2" },
+        "age=3": { "model": "meinmod:dumbPlant_3" },
+        "age=4": { "model": "meinmod:dumbPlant_4" },
+        "age=5": { "model": "meinmod:dumbPlant_5" },
+        "age=6": { "model": "meinmod:dumbPlant_6" },
+        "age=7": { "model": "meinmod:dumbPlant_7" }
+    }
+}

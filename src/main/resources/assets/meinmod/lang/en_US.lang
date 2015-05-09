@@ -1,5 +1,6 @@
 tile.MeinMod_dumbBlock.name=Dumb Block
 tile.MeinMod_tealOre.name=Tealite
+tile.MeinMod_tealStone.name=Tealite Stone
 item.MeinMod_dumbThing.name=Dumb Thing
 item.MeinMod_berry.name=Berry
 item.MeinMod_key.white.name=White Key
@@ -17,3 +18,4 @@ item.MeinMod_tealHelmet.name=Tealium Helmet
 item.MeinMod_tealChestplate.name=Tealium Chestplate
 item.MeinMod_tealLeggings.name=Tealium Leggings
 item.MeinMod_tealBoots.name=Tealium Boots
+item.MeinMod_dumbSeed.name=Dumb Seeds
